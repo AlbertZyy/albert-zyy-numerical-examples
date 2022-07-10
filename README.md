@@ -1,2 +1,3 @@
 # albert-zyy-numerical-examples
-Some examples and exercises in my study of Numerical Method
+
+This repository is only to store some examples and exercises in my study of Numerical Method.
