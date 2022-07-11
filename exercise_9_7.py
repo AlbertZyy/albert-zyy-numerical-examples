@@ -1,3 +1,4 @@
+"""Linear programming."""
 
 from itertools import combinations
 from numpy.typing import ArrayLike, NDArray
