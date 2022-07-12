@@ -1,27 +1,40 @@
-from typing import Literal, SupportsIndex, Union
-from numpy.typing import NDArray
+
 from numpy.linalg import norm
 import numpy as np
 
+# Create an array
+vec1 = np.array([1.0, -2.0, 3.0])
 
-def p_norm(__x: NDArray, __ord: Union[SupportsIndex, Literal["inf"]] = 2) -> float:
-    if __ord == "inf":
-        return np.max(np.abs(__x))
-    __ord = int(__ord)
-    return np.sum(np.power(__x, __ord)) ** (1 / __ord)
+# 2-norm
+ret = np.sqrt(np.sum(vec1 ** 2))
+print(ret)
+print(norm(vec1, 2))
 
-def frobenius_norm(__x: NDArray) -> float:
-    squ = np.sum(np.square(__x))
-    return np.sqrt(squ)
+# inf-norm
+ret = np.max(np.abs(vec1))
+print(ret)
+print(norm(vec1, np.inf))
 
-def angle(__x: NDArray, __y: NDArray) -> float:
-    tan = np.inner(__x, __y) / (norm(__x, 2), norm(__y, 2))
-    return np.arctan(tan)
-
-a = np.array(
+# Create a matrix
+mat1 = np.array(
     [
-        [1, 2, 3]
+        [4, 2, 1],
+        [2, 1, 3],
+        [1, 3, 0]
     ]
 )
 
-print(p_norm(a))
+# frobenius_norm
+squ = np.sum(np.square(mat1))
+ret = np.sqrt(squ)
+print(ret)
+print(norm(mat1, "fro"))
+
+# Create two arrays
+vec_a = np.array([1, 2, 3])
+vec_b = np.array([-1, 2, -3])
+
+# angle
+cos = np.inner(vec_a, vec_b) / (norm(vec_a, 2) * norm(vec_b, 2))
+ret = np.arccos(cos)
+print(ret)

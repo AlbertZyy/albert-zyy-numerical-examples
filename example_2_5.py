@@ -5,8 +5,8 @@ import numpy as np
 from numpy.polynomial.polynomial import Polynomial
 from matplotlib import pyplot as plt
 
-def func(__x):
-    return 1 / (1+25 * __x ** 2)
+def func(x):
+    return 1 / (1+25 * x ** 2)
 
 x_pnt = np.linspace(-1, 1, 100)
 y_pnt = func(x_pnt)
