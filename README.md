@@ -12,6 +12,7 @@ This repository is only to store some examples and exercises in the study of Num
 + 3.3 - Reveal the meaning of "intersection points";
 + 3.4 - Show some chebyshev polynomials;
 + 4.2 - Examples for gaussian elimination and LU decomposition.
++ 5.3 - Newton method and Newton downhill method.
 
 ### Exercises
 
